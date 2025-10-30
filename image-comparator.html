@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<!--
+	Image Comparator Project | Same styling as main site
+-->
+<html>
+	<head>
+		<title>Image Comparator | Jayanto Mukherjee</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="logo">
+					<span class="icon fa-microchip"></span>
+				</div>
+				<div class="content">
+					<div class="inner">
+						<h1>Jayanto Mukherjee</h1>
+						<p>Electrical Engineer | Analog IC Design | Embedded Systems | UIUC Alum | MSECE @ UMN</p>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html#intro">Intro</a></li>
+						<li><a href="index.html#work">Projects</a></li>
+						<li><a href="index.html#about">About</a></li>
+						<li><a href="index.html#contact">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Main -->
+			<div id="main">
+				<article id="image-comparator">
+					<h2 class="major">Image Comparator Circuit</h2>
+					<span class="image main">
+						<img src="images/image-comparator.png" alt="Image Comparator" />
+					</span>
+
+					<p><strong>Timeline:</strong> Apr 2025 – May 2025<br />
+					<strong>Tools:</strong> Cadence Virtuoso, HSPICE, Assura, CosmosScope</p>
+
+					<p>Developed an image comparator circuit to identify differences in binary-encoded grayscale images. The design used XOR gates and adders for pixel-level comparison on Cadence Virtuoso and was simulated using HSPICE.</p>
+
+					<ul>
+						<li>Integrated a Parallel-In Parallel-Out (PIPO) register for efficient data handling and synchronization.</li>
+						<li>Included a Parallel-In Serial-Out (PISO) shift register for serialized data output.</li>
+						<li>Implemented an on-chip clock divider to synchronize operations at one-fourth the 2.4 GHz clock frequency.</li>
+						<li>Performed DRC and LVS checks using Assura; analyzed results with CosmosScope on Linux.</li>
+						<li>Debugged and enhanced an off-chip driver to increase output swing from 1.1V to 1.8V, ensuring operation even at 3 GHz with a 12 pF capacitive load.</li>
+					</ul>
+
+					<ul class="actions">
+						<li><a href="index.html#work" class="button primary">Back to Projects</a></li>
+					</ul>
+				</article>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<p>&copy; Jayanto Mukherjee. Template: <a href="https://html5up.net">HTML5 UP</a>.</p>
+			</footer>
+
+		</div>
+
+		<!-- Background + Scripts -->
+		<div id="bg"></div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

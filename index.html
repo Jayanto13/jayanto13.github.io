@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP (Modified by Jayanto Mukherjee)
+	html5up.net | @ajlkn
+-->
+<html>
+<head>
+	<title>Jayanto Mukherjee | Portfolio</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="logo">
+				<span class="icon fa-microchip"></span>
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>Jayanto Mukherjee</h1>
+					<p>Electrical Engineer | Analog IC Design |MSECE @ UMN | BSECE UIUC </p>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#intro">Intro</a></li>
+					<li><a href="#work">Projects</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Intro -->
+			<article id="intro">
+				<h2 class="major">Intro</h2>
+				<span class="image main"><img src="images/pic01.jpg" alt="Jayanto Mukherjee" /></span>
+				<p>Hi, I'm Jayanto, an electrical engineer passionate about mixed-signal IC design. I’ve built systems ranging from Low Dropout Regulators to Digital Image Comparators in Cadence. I enjoy working at the intersection of hardware design and embedded systems, and I’m currently pursuing my MSECE at the University of Minnesota.</p>
+				<p>Feel free to reach out to me for any additional details.</p>
+			</article>
+
+			<!-- Work -->
+			<article id="work">
+				<h2 class="major">Projects</h2>
+				<span class="image main"><img src="images/pic02.jpg" alt="Project Work" /></span>
+				<ul>
+					<li><a href="#image-comparator"><strong>Image Comparator Circuit</strong></a>: Digital grayscale comparator with registers and clock divider.</li>
+					<li><a href="#ldo"><strong>Low Dropout Regulator</strong></a>: Folded Cascode OTA and PMOS pass transistor design.</li>
+					<li><a href="#senior-design"><strong>Senior Design Project (MazEscape)</strong></a>: Multi-PCB WiFi-connected locking system.</li>
+					<li><a href="#control-system"><strong>Reaction Wheel Pendulum</strong></a>: Real-time control with Simulink and embedded deployment.</li>
+					<li><a href="#acdc"><strong>AC-DC Power Supply</strong></a>: ±2% ripple power supply, LTSpice simulation and PCB assembly.</li>
+
+				</ul>
+			</article>
+
+			<!-- Image Comparator -->
+			<article id="image-comparator">
+				<h2 class="major">Image Comparator Circuit</h2>
+				<span class="image main"><img src="images/image-comparator.png" alt="Image Comparator" /></span>
+				<p><strong>Timeline:</strong> Apr 2025 – May 2025<br>
+				<strong>Tools:</strong> Cadence Virtuoso, HSPICE, Assura, CosmosScope</p>
+				<p>Developed an image comparator circuit to identify differences in binary-encoded grayscale images, using XOR gates and adders for pixel-level comparison on Cadence Virtuoso and simulated in HSPICE.</p>
+				<ul>
+					<li>Parallel-In Parallel-Out (PIPO) register for efficient data handling.</li>
+					<li>Parallel-In Serial-Out (PISO) register for serialized output.</li>
+					<li>On-chip clock divider to operate at 1/4 of the 2.4 GHz clock.</li>
+					<li>DRC and LVS checks in Assura, simulation with CosmosScope.</li>
+					<li>Off-chip driver debugged to drive output from 1.1V to 1.8V at 3 GHz with 12 pF load.</li>
+				</ul>
+				<ul class="actions">
+					<li><a href="#work" class="button primary">Back to Projects</a></li>
+				</ul>
+			</article>
+
+			<!-- Low Dropout Regulator -->
+			<article id="ldo">
+				<h2 class="major">Low Dropout Regulator</h2>
+				<span class="image main"><img src="images/ldo.png" alt="Low Dropout Regulator" /></span>
+				<p><strong>Timeline:</strong> Apr 2025 – May 2025<br>
+				<strong>Tools:</strong> Cadence Virtuoso, Analog IC Design</p>
+				<p>Designed a low dropout regulator (LDO) to meet stringent specifications under load and line regulations, varying load currents, and phase margin requirements.</p>
+				<ul>
+					<li><strong>Folded Cascode OTA:</strong> High gain, low-voltage error amplifier with superior input/output range.</li>
+					<li><strong>PMOS Pass Transistor:</strong> Enabled low dropout voltage operation under tight headroom.</li>
+					<li><strong>Voltage Scalability:</strong> Achieved regulated outputs of 1.0V, 1.2V, and 1.4V via reference scaling.</li>
+				</ul>
+				<ul class="actions">
+					<li><a href="#work" class="button primary">Back to Projects</a></li>
+				</ul>
+			</article>
+
+			
+			<!-- ESP32 Door Lock -->
+			<article id="senior-design">
+				<h2 class="major">MazEscape</h2>
+				<span class="image main"><img src="images/esp32-lock.png" alt="Senior Design Project" /></span>
+				<p><strong>Tools:</strong> KiCAD, ESP32, PCB Design, Arduino IDE, Circuit Debugging</p>
+				<p>Designed a multi-PCB door lock system with ESP32 microcontrollers, keypad inputs, LCD screens, solenoid locks, and WiFi communication.</p>
+				<ul>
+					<li>Four separate PCBs with synchronized WiFi operation.</li>
+					<li>Power management with efficient buck converters for 3.3V and 5V rails.</li>
+					<li>Microcontroller programmed to display questions and unlock upon correct keypad input.</li>
+				</ul>
+				<ul class="actions">
+					<li><a href="#work" class="button primary">Back to Projects</a></li>
+				</ul>
+			</article>
+
+			<!-- Reaction Wheel Pendulum -->
+			<article id="control-system">
+				<h2 class="major">Reaction Wheel Pendulum</h2>
+				<span class="image main"><img src="images/pendulum.png" alt="Reaction Wheel Pendulum" /></span>
+				<p><strong>Tools:</strong> MATLAB, Simulink, Embedded Deployment</p>
+				<p>Designed and implemented a real-time control system for a nonlinear electromechanical pendulum.</p>
+				<ul>
+					<li>Two-state and three-state PD controllers with friction compensation.</li>
+					<li>Luenberger observer for full-state feedback with limited sensors.</li>
+					<li>Swing-up control and mode-switching logic in Simulink Stateflow.</li>
+				</ul>
+				<ul class="actions">
+					<li><a href="#work" class="button primary">Back to Projects</a></li>
+				</ul>
+			</article>
+
+			<!-- AC-DC Power Supply -->
+			<article id="acdc">
+				<h2 class="major">AC-DC Power Supply</h2>
+				<span class="image main"><img src="images/acdc.png" alt="AC-DC Power Supply" /></span>
+				<p><strong>Tools:</strong> LTSpice, PCB Design</p>
+				<p>Designed and built a regulated 4.7V DC power supply, simulated in LTSpice, prototyped on breadboard, and assembled on PCB.</p>
+				<ul>
+					<li>±2% voltage stability for 115–125 Vrms AC input.</li>
+					<li>Ripple voltage maintained under 2% of output DC.</li>
+					<li>Output current range: 0–20 mA.</li>
+				</ul>
+				<ul class="actions">
+					<li><a href="#work" class="button primary">Back to Projects</a></li>
+				</ul>
+			</article>
+
+
+			<!-- About -->
+			<article id="about">
+				<h2 class="major">About</h2>
+				<span class="image main"><img src="images/pic03.jpg" alt="About Jayanto" /></span>
+				<p>I’m currently pursuing my Masters in Electrical Engineering at the University of Minnesota, after having graduated from the University of Illinois Urbana-Champaign with a B.Sc. in Electrical Engineering. My main interests lies in Analog IC design and Mixed-signal ICs. </p>
+			</article>
+
+			<!-- Contact -->
+			<article id="contact">
+				<h2 class="major">Contact</h2>
+				<form method="post" action="#">
+					<div class="fields">
+						<div class="field half">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" />
+						</div>
+						<div class="field half">
+							<label for="email">Email</label>
+							<input type="text" name="email" id="email" />
+						</div>
+						<div class="field">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" rows="4"></textarea>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><input type="submit" value="Send Message" class="primary" /></li>
+						<li><input type="reset" value="Reset" /></li>
+					</ul>
+				</form>
+				<ul class="icons">
+					<li><a href="https://github.com/jayantomukherjee" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto:jayantomukherjee1@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://linkedin.com/in/jayantomukherjee" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				</ul>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p>&copy; Jayanto Mukherjee. Template: <a href="https://html5up.net">HTML5 UP</a>.</p>
+		</footer>
+	</div>
+
+	<!-- Background and Scripts -->
+	<div id="bg"></div>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
