@@ -43,7 +43,7 @@
 			<!-- Intro -->
 			<article id="intro">
 				<h2 class="major">Intro</h2>
-				<span class="image main"><img src="images/pic01.jpg" alt="Jayanto Mukherjee" /></span>
+				<span class="image main"><img src="images/pic01.jpg" alt="Jayanto Mukherjee" style="width:50%; height:50%; display:block; margin:0 auto;" /></span>
 				<p>Hi, I'm Jayanto, an electrical engineer passionate about mixed-signal IC design. I’ve built systems ranging from Low Dropout Regulators to Digital Image Comparators in Cadence. I enjoy working at the intersection of hardware design and embedded systems, and I’m currently pursuing my MSECE at the University of Minnesota.</p>
 				<p>Feel free to reach out to me for any additional details.</p>
 			</article>
@@ -55,6 +55,7 @@
 				<ul>
 					<li><a href="#image-comparator"><strong>Image Comparator Circuit</strong></a>: Digital grayscale comparator with registers and clock divider.</li>
 					<li><a href="#ldo"><strong>Low Dropout Regulator</strong></a>: Folded Cascode OTA and PMOS pass transistor design.</li>
+					<li><a href="#Analog_IC_Design"><strong>Biquadratic Filter (In Progress)</strong></a>: Switched-Capacitor Filter Design</li>
 					<li><a href="#senior-design"><strong>Senior Design Project (MazEscape)</strong></a>: Multi-PCB WiFi-connected locking system.</li>
 					<li><a href="#control-system"><strong>Reaction Wheel Pendulum</strong></a>: Real-time control with Simulink and embedded deployment.</li>
 					<li><a href="#acdc"><strong>AC-DC Power Supply</strong></a>: ±2% ripple power supply, LTSpice simulation and PCB assembly.</li>
@@ -65,9 +66,9 @@
 			<!-- Image Comparator -->
 			<article id="image-comparator">
 				<h2 class="major">Image Comparator Circuit</h2>
-				<span class="image main"><img src="images/image-comparator.png" alt="Image Comparator" /></span>
+				<span class="image main"><img src="images/image-comparator.png" alt="Image Comparator" style="width:60%; height:50%; display:block; margin:0 auto;" /></span>
 				<p><strong>Timeline:</strong> Apr 2025 – May 2025<br>
-				<strong>Tools:</strong> Cadence Virtuoso, HSPICE, Assura, CosmosScope</p>
+				<strong>Tools:</strong> Cadence Virtuoso, HSPICE, Assura, CosmosScope, 45nm TSMC PDK</p>
 				<p>Developed an image comparator circuit to identify differences in binary-encoded grayscale images, using XOR gates and adders for pixel-level comparison on Cadence Virtuoso and simulated in HSPICE.</p>
 				<ul>
 					<li>Parallel-In Parallel-Out (PIPO) register for efficient data handling.</li>
@@ -86,7 +87,7 @@
 				<h2 class="major">Low Dropout Regulator</h2>
 				<span class="image main"><img src="images/ldo.png" alt="Low Dropout Regulator" /></span>
 				<p><strong>Timeline:</strong> Apr 2025 – May 2025<br>
-				<strong>Tools:</strong> Cadence Virtuoso, Analog IC Design</p>
+				<strong>Tools:</strong> Cadence Virtuoso, Analog IC Design, 180nm TSMC PDK</p>
 				<p>Designed a low dropout regulator (LDO) to meet stringent specifications under load and line regulations, varying load currents, and phase margin requirements.</p>
 				<ul>
 					<li><strong>Folded Cascode OTA:</strong> High gain, low-voltage error amplifier with superior input/output range.</li>
@@ -96,6 +97,25 @@
 				<ul class="actions">
 					<li><a href="#work" class="button primary">Back to Projects</a></li>
 				</ul>
+			
+			</article>
+
+			<!-- Biquadratic Filter (In Progress) -->
+			<article id="Analog_IC_Design">
+				<h2 class="major">Switched-Capacitor Filter</h2>
+				<span class="image main"><img src="images/fullydiff.png" alt="Switched Capacitor Circuit" /></span>
+				<p><strong>Timeline:</strong> September 2025 – December 2025<br>
+				<p><strong>Tools:</strong> Cadence Virtuoso, LTspice, Analog IC Design, 50nm PDK</p>
+				<p>Designing a fully differential biquadratic switched-capacitor filter for Wi-Fi applications.</p>
+				<ul>
+					<li>The design targets a 1024-QAM signal specifications and will be implemented in a 50 nm CMOS process with a gain of around 60dB and a sampling rate of 60Msps.</li>
+					<li>Will utilize a three current-mirror OTA topology offering high output swing and fast transient response and optimized for low power distortion.</li>
+					<li>The circuit is currently being verified and performance-tested through detailed simulations in LTspice and Cadence virtuoso.</li>
+				</ul>
+				<ul class="actions">
+					<li><a href="#work" class="button primary">Back to Projects</a></li>
+				</ul>
+
 			</article>
 
 			
@@ -152,7 +172,8 @@
 			<article id="about">
 				<h2 class="major">About</h2>
 				<span class="image main"><img src="images/pic03.jpg" alt="About Jayanto" /></span>
-				<p>I’m currently pursuing my Masters in Electrical Engineering at the University of Minnesota, after having graduated from the University of Illinois Urbana-Champaign with a B.Sc. in Electrical Engineering. My main interests lies in Analog IC design and Mixed-signal ICs. </p>
+				<p>I’m currently pursuing my Masters in Electrical Engineering at the University of Minnesota, after having graduated from the University of Illinois Urbana-Champaign with a B.Sc. in Electrical Engineering.</p>
+				<p>I am seeking opportunities in analog and mixed-signal IC design—particularly in filter design and data converters—and in projects that leverage my experience with PCB design and prototyping.</p>
 			</article>
 
 			<!-- Contact -->
