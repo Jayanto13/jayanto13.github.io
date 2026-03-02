@@ -67,8 +67,8 @@
 			<!-- Biquadratic Switched Capacitor Filter -->
 			<!-- Biquadratic Switched Capacitor Filter -->
 			<article id="biquadratic-filter">
-			<h2 class="major">Switched Capacitor Biquadratic Filter (WiFi Application)</h2>
-			<span class="image main"><img src="images/biquad.png" alt="Switched Capacitor Biquadratic Filter" /></span>
+			<h2 class="major">Switched Capacitor Biquad Filter</h2>
+			<span class="image main"><img src="images/fullydiff.png" alt="Switched Capacitor Biquadratic Filter" /></span>
 
 			<p><strong>Timeline:</strong> Sep 2025 – Dec 2025<br>
 			<strong>Technology:</strong> 50 nm CMOS<br>
@@ -87,22 +87,6 @@
 
 			<hr />
 
-			<h3>System-Level Design</h3>
-			<ul>
-				<li>Sampling Frequency (Fs): 10 MHz</li>
-				<li>Passband Frequency: 1 MHz</li>
-				<li>Stopband Frequency: 4 MHz</li>
-				<li>Filter Type: 2nd Order Elliptic IIR</li>
-				<li>Target Q: 0.97 (Low-Q Design)</li>
-			</ul>
-
-			<p>
-			The transfer function was first derived in MATLAB (z-domain), then mapped into an 
-			equivalent switched-capacitor implementation. The low-Q architecture was selected 
-			to ensure stability under finite OTA gain and limited phase margin conditions.
-			</p>
-
-			<hr />
 
 			<h3>Two-Stage OTA Design</h3>
 			<p>
@@ -119,9 +103,9 @@
 
 			<h4>Measured OTA Performance (Fully Differential)</h4>
 			<ul>
-				<li>DC Gain: 31.5 dB</li>
+				<li>DC Gain: 38.5 dB</li>
 				<li>Unity Gain Frequency: 532 MHz</li>
-				<li>Phase Margin: 49°</li>
+				<li>Phase Margin: 62°</li>
 				<li>Bandwidth: 17 MHz</li>
 				<li>Slew Rate: 27.3 V/µs</li>
 				<li>Input-Referred Noise: 16.8 nV/√Hz</li>
@@ -153,6 +137,7 @@
 			<hr />
 
 			<h3>Single-Ended SC Implementation</h3>
+			<span class="image main"><img src="lowQ.png" alt="Single-Ended SC Low Q" /></span>
 			<p>
 			The first implementation was a single-ended low-Q switched-capacitor biquad. 
 			Capacitor ratios were calculated directly from the derived transfer function.
@@ -167,6 +152,9 @@
 			<p>
 			The design successfully demonstrated frequency selectivity, though harmonic 
 			distortion indicated insufficient loop gain.
+			The transfer function was first derived in MATLAB (z-domain), then mapped into an 
+			equivalent switched-capacitor implementation. The low-Q architecture was selected 
+			to ensure stability under finite OTA gain and limited phase margin conditions.
 			</p>
 
 			<hr />
