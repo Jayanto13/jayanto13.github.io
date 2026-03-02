@@ -65,16 +65,147 @@
 
 
 			<!-- Biquadratic Switched Capacitor Filter -->
+			<!-- Biquadratic Switched Capacitor Filter -->
 			<article id="biquadratic-filter">
-				<h2 class="major">Switched Capacitor Circuit</h2>
-				<span class="image main"><img src="images/biquad.png" alt="Swictched Capacitor Circuit" /></span>
-				<p><strong>Timeline:</strong> Sep 2025 – Dec 2025<br>
-				<strong>Tools:</strong> Cadence Virtuoso, LTSPICE, MatLab </p>
-				<p>Designed a fully differential switched-capacitor biquadratic filter optimized for Wi-Fi applications using a 50 nm CMOS PDK.</p>
-				<p>Validated robust operation across process, voltage, and temperature (PVT) corners, including TT, SS, and FF processes, supply voltages from 0.9 V to 1.1 V, and temperatures of 75 °C and 90 °C.</p>
-				<p>Implemented a two-stage operational transconductance amplifier (OTA) architecture with a common-mode feedback (CMFB) system as the core building block.</p>	
-				<ul class="actions">
-					<li><a href="#work" class="button primary">Back to Projects</a></li>
+			<h2 class="major">Switched Capacitor Biquadratic Filter (WiFi Application)</h2>
+			<span class="image main"><img src="images/biquad.png" alt="Switched Capacitor Biquadratic Filter" /></span>
+
+			<p><strong>Timeline:</strong> Sep 2025 – Dec 2025<br>
+			<strong>Technology:</strong> 50 nm CMOS<br>
+			<strong>Tools:</strong> Cadence Virtuoso, Spectre, LTSpice, MATLAB<br>
+			<strong>Supply Voltage:</strong> 1.0 V</p>
+
+			<hr />
+
+			<h3>Project Objective</h3>
+			<p>
+			Designed a fully differential switched-capacitor (SC) biquadratic low-pass filter 
+			targeted for WiFi receiver front-end applications. The goal was to implement a 
+			second-order low-Q elliptic response operating at 10 MHz sampling frequency, 
+			while maintaining stability across PVT corners.
+			</p>
+
+			<hr />
+
+			<h3>System-Level Design</h3>
+			<ul>
+				<li>Sampling Frequency (Fs): 10 MHz</li>
+				<li>Passband Frequency: 1 MHz</li>
+				<li>Stopband Frequency: 4 MHz</li>
+				<li>Filter Type: 2nd Order Elliptic IIR</li>
+				<li>Target Q: 0.97 (Low-Q Design)</li>
+			</ul>
+
+			<p>
+			The transfer function was first derived in MATLAB (z-domain), then mapped into an 
+			equivalent switched-capacitor implementation. The low-Q architecture was selected 
+			to ensure stability under finite OTA gain and limited phase margin conditions.
+			</p>
+
+			<hr />
+
+			<h3>Two-Stage OTA Design</h3>
+			<p>
+			The core building block of the SC filter was a fully differential two-stage OTA 
+			with Miller compensation and Common Mode Feedback (CMFB).
+			</p>
+
+			<ul>
+				<li>Topology: Differential Pair + Common Source Second Stage</li>
+				<li>Compensation: Miller RC (R ≈ 1/gm)</li>
+				<li>Design Methodology: gm/Id based sizing</li>
+				<li>CMFB: Resistive sensing with active feedback loop</li>
+			</ul>
+
+			<h4>Measured OTA Performance (Fully Differential)</h4>
+			<ul>
+				<li>DC Gain: 31.5 dB</li>
+				<li>Unity Gain Frequency: 532 MHz</li>
+				<li>Phase Margin: 49°</li>
+				<li>Bandwidth: 17 MHz</li>
+				<li>Slew Rate: 27.3 V/µs</li>
+				<li>Input-Referred Noise: 16.8 nV/√Hz</li>
+			</ul>
+
+			<p>
+			Although the gain target of 60 dB was not fully met, the OTA demonstrated strong 
+			bandwidth and acceptable phase margin for switched-capacitor operation.
+			</p>
+
+			<hr />
+
+			<h3>PVT Analysis</h3>
+			<p>
+			The OTA was validated across TT, SS, and FF corners at temperatures of 0°C, 30°C, and 70°C.
+			</p>
+
+			<ul>
+				<li>Gain degradation observed at SS corner (down to ~24 dB)</li>
+				<li>Phase Margin varied from 40° (TT) to 80° (FF)</li>
+				<li>UGF ranged from 377 MHz (SS) to 550 MHz (FF)</li>
+			</ul>
+
+			<p>
+			Corner analysis revealed gain sensitivity to process variations, which directly 
+			impacted the linearity of the final switched-capacitor implementation.
+			</p>
+
+			<hr />
+
+			<h3>Single-Ended SC Implementation</h3>
+			<p>
+			The first implementation was a single-ended low-Q switched-capacitor biquad. 
+			Capacitor ratios were calculated directly from the derived transfer function.
+			</p>
+
+			<ul>
+				<li>Reconstruction filter: 2nd order Sallen-Key</li>
+				<li>FFT analysis performed for linearity validation</li>
+				<li>Observed distortion attributed to limited OTA gain</li>
+			</ul>
+
+			<p>
+			The design successfully demonstrated frequency selectivity, though harmonic 
+			distortion indicated insufficient loop gain.
+			</p>
+
+			<hr />
+
+			<h3>Fully Differential SC Biquad</h3>
+			<p>
+			The architecture was extended to a fully differential configuration by mirroring 
+			and phase-flipping the capacitor network. While theoretically sound, the design 
+			exhibited instability due to:
+			</p>
+
+			<ul>
+				<li>Finite OTA gain</li>
+				<li>Reduced phase margin under load</li>
+				<li>CMFB interaction with switching transients</li>
+			</ul>
+
+			<p>
+			This highlighted the critical dependence of SC filters on high-gain, high-phase-margin OTAs.
+			</p>
+
+			<hr />
+
+			<h3>Key Learnings</h3>
+			<ul>
+				<li>Practical limits of gm/Id design in scaled CMOS</li>
+				<li>Impact of finite gain on discrete-time filter accuracy</li>
+				<li>Tradeoffs between swing, gain, and bandwidth in two-stage OTAs</li>
+				<li>Importance of robust CMFB in fully differential SC systems</li>
+				<li>Corner-driven instability mechanisms in mixed-signal blocks</li>
+			</ul>
+
+			<p>
+			This project significantly deepened my understanding of analog IC design tradeoffs 
+			and switched-capacitor filter implementation in nanoscale CMOS technologies.
+			</p>
+
+			<ul class="actions">
+				<li><a href="#work" class="button primary">Back to Projects</a></li>
 				</ul>
 			</article>
 
